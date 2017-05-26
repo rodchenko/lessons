@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/counter/increment', (req, res) => {
-  console.log(req.rawHeaders)
+  console.log(req.headers)
   counter++
   res.send({counter: counter})
 })

@@ -1,0 +1,14 @@
+{
+  "name": "example-remote-call",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node-notifier": "^5.1.2",
+    "say": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  }
+}

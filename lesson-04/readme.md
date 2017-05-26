@@ -1,7 +1,7 @@
 # Занятие 04: простейший интерфейс
 
 1. Статичная html-страница
-2. Страница, которая посылает запросы на сервер
+2. Страница, которая посылает запросы на сервер, сервер
 
 
 ### 1. Первый статичный файл
@@ -67,7 +67,7 @@ app.listen(8000)
 // (то есть http://localhost:8000)
 // отдаем OK и частично логируем переменную request
 app.get('/', function (request, response) {
-  console.log('rawHeaders', request.rawHeaders)
+  console.log('headers', request.headers)
   response.send('OK')
 })
 ```
