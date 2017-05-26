@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>api call</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style type="text/css">
       html, body {
         height: 100%;
@@ -36,16 +37,11 @@
     </div>
     <script type="text/javascript">
       function apiCall (address) {
-        var xhttp = new XMLHttpRequest()
-        xhttp.open('GET', address, false)
-        xhttp.setRequestHeader('Content-type', 'application/json')
-        xhttp.send()
-        try {
-          var response = JSON.parse(xhttp.responseText)
-          document.getElementsByClassName('counter')[0].textContent = response.counter
-        } catch (e) {
-          document.getElementsByClassName('counter')[0].textContent = 'error'
-        }
+        $.getJSON(address, function(data) {
+          $('.counter').text(data.counter)
+        }).fail(function() {
+          $('.counter').text('error')
+        })
       }
       apiCall('/counter/get')
     </script>
