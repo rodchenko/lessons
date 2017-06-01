@@ -2,7 +2,7 @@
   "name": "example-node-video-sync",
   "dependencies": {
     "mqtt": "^2.8.0",
-    "vlc-simple-player": "^0.2.1"
+    "vlc-simple-player": "^0.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
